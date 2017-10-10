@@ -1,1 +1,5 @@
-<p> {{ raw_text }} </p>
+{% for entry in accounts %}
+<a href="personalised stream url here"> {{ entry.name }}</a>
+<br>
+<br>
+{% endfor %}

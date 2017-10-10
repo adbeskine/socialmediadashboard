@@ -18,7 +18,7 @@ def example_facebook_login_success(request):
 		pass
 	else:
 		return render(request, 'error, security keys failed verification') #5. if the user access token doesn't verify abort
-	accounts = requests.get('https://graph.facebook.com/me/accounts?access_token={}'.format(access_token)).json() #6. get all user pages
-	context = {'raw_text':accounts}
-
+	raw_accounts = requests.get('https://graph.facebook.com/me/accounts?access_token={}'.format(access_token)).json() #6. get all user pages
+	accounts = raw_accounts['data']
+	context = {'accounts':accounts}
 	return render(request, 'facebook_data/example_login_success.html', context)
