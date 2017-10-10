@@ -25,12 +25,13 @@ SECRET_KEY = 'k0!had-n)*hjhdwct#&^6*kxe(kwasrpn1!4@5kf@%hk**t9_3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['97dd129e.ngrok.io']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'facebook_data.apps.FacebookDataConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
