@@ -22,3 +22,10 @@ def example_facebook_login_success(request):
 	accounts = raw_accounts['data']
 	context = {'accounts':accounts}
 	return render(request, 'facebook_data/example_login_success.html', context)
+
+
+def example_facebook_stream(request, page_id, access_token): # in the returned json from a successful login, access_token = entry.access_token (see above), id=entry.id(see above)
+	f = requests.get('https://graph.facebook.com/{page_id}/feed?access_token={access_token}'.format(page_id=page_id, access_token=access_token))
+	stream = f.json()['data']
+	context = {'stream':stream}
+	return render(request, 'facebook_data/example_stream.html', context)

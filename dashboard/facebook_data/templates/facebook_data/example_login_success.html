@@ -1,5 +1,7 @@
+login successful, click to view stream: <br>
+
 {% for entry in accounts %}
-<a href="personalised stream url here"> {{ entry.name }}</a>
+<a href="{% url 'facebook_data:example_facebook_stream' page_id=entry.id access_token=entry.access_token %}"> {{ entry.name }}</a>
 <br>
 <br>
 {% endfor %}
