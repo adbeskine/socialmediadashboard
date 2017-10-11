@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'^', include('users.urls')),
 	url(r'^dashboard/', include('render_dashboard.urls')),
 	url(r'^facebook_data/', include('facebook_data.urls')),
     url(r'^admin/', admin.site.urls),

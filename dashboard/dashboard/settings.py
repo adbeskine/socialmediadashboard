@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['97dd129e.ngrok.io']
 # Application definition
 
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',
     'render_dashboard.apps.RenderDashboardConfig',
     'facebook_data.apps.FacebookDataConfig',
     'django.contrib.admin',
