@@ -3,7 +3,7 @@ from django.test import TestCase
 class facebook_authentication_tests(TestCase):
 
 	def test_login_flow(self):
-		# using a valid facebook login flow a user can generate an access token to be stored
+		# needs to be done using selenium...
 
 	def test_hostile_command(self):
 		# if a command which is NOT from the dashboard is received by the facebook_data app it is rejected and reported to the account owner.

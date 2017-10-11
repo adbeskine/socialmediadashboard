@@ -1,6 +1,10 @@
 from django.shortcuts import render
 import requests
 
+####################################
+#########PROTOTYPE##################
+####################################
+
 
 def example_facebook_login(request):
 	return render(request, 'facebook_data/login_example.html')
@@ -29,3 +33,7 @@ def example_facebook_stream(request, page_id, access_token): # in the returned j
 	stream = f.json()['data']
 	context = {'stream':stream}
 	return render(request, 'facebook_data/example_stream.html', context)
+
+
+#########################################################################################
+
